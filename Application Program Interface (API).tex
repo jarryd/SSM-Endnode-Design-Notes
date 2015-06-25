@@ -49,23 +49,15 @@ Type:
 This topic outputs raw scan files
 
 Parameters:
-\begin{lstlisting}
-Start   Start of the frequency range in megahertz)
-End     End of the frequency range in megahertz)
-Gain    Scan gain in Decibels (optional, default – 0dB)
-Dwell   Dwell time in seconds (optional, default – 131ms)
-FFT     The number of FFT bins (optional, default – 1024)
-LO      The local oscillator offset in megahertz (optional, default – 0MHz)
-\end{lstlisting}
 
 \begin{lstlisting}
-task_id                 ="power scan"
+task_id                 Task ID string 'power scan'
 lower_freq              Start of the frequency range in hertz
 upper_freq              End of the frequency range in hertz
 bin_size                Number of FFT bins
 gain                    Gain
-exit_timer              ="2s"
-integration_interval    ="2s"
+exit_timer              Time before exiting the scan '2s'
+integration_interval    Integration interval or 'dwell' "2s"
 band_offset             Band offset, the amount of non-linear band to trim off (typically 20%)
 \end{lstlisting}
 
@@ -111,6 +103,7 @@ Wether or not the endnode is currently connected to the broker
 
 
 
+    
     
     
     
