@@ -1,8 +1,4 @@
-\textit{Oh, an empty article!} 
-
-You can get started by \textbf{double clicking} this text block and begin editing. You can also click the \textbf{Insert} button below to add new block elements. Or you can \textbf{drag and drop an image} right onto this text. Happy writing!
-
-\section{SOFTWARE STACK}
+\section{Software Stack}
 
 The design goals of the software stack are:
 \begin{itemize}
@@ -11,6 +7,20 @@ The design goals of the software stack are:
 \item Cross-platform
 \end{itemize}
 
+\subsection{Platform}
+\subsubsection{Operating System}
+Official \href{https://www.olimex.com/wiki/A20-OLinuXino-LIME#How_to_generate_boot-able_SD-card_Debian_Linux_image_for_A20-OLinuXino-LIME.3F}{Olimex LIME Debian} based on Linux kernel 3.4.90+ downloaded as a SD-card image file . Custom linux systems may also be built following tutorials on the download page.
 
+\subsubsection{Interpreter}
+
+Package:	Python 2.7
+
+Python is a simple, cross-platform, object-oriented programming language that is widely used across the open-source community.
+
+\subsubsection{SPI, I2C, GPIO}
+	
+Package:	pyA20Lime
+
+SPI/I2C/GPIO is used to communicate with the power management IC. GPIO is used to control and monitor the Telit GE910-GNSS. GPIO is used to control the system, network, location and fault LEDs.
     
     
