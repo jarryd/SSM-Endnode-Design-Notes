@@ -124,21 +124,21 @@ pynmea2 is used to parse Telit NMEA strings into Python objects so they can inte
 \subsection{Remote telemetry}
 
 \subsubsection{MQTT}
-Package:	\href{https://eclipse.org/paho/clients/python/}{paho}
+Package:	\href{https://eclipse.org/paho/clients/python/}{paho}\\
 
 \subsection{GSM/GPRS Dialer}
-Package: 	ppp with wvdial
+Package: 	ppp with wvdial\\
 See Appendix B for wvdial configuration file.
 
 \subsubsection{Sub-process interface}
-Package:	\href{https://docs.python.org/2/library/subprocess.html}{subprocess}
+Package:	\href{https://docs.python.org/2/library/subprocess.html}{subprocess}\\
 
 \subsection{SDR}
 \subsubsection{SDR hardware interface}
-Package:	\href{https://github.com/steve-m/librtlsdr}{rtlsdr}
+Package:	\href{https://github.com/steve-m/librtlsdr}{rtlsdr}\\
 
 \subsubsection{rtlsdr wrapper}
-Package:	\href{https://github.com/roger-/pyrtlsdr}{pyrtlsdr}
+Package:	\href{https://github.com/roger-/pyrtlsdr}{pyrtlsdr}\\
 The software defined radio utilities used are based on the rtlsdr drivers by Antti Palosaari, Osmocom and Eric Fry. rtl-sdr is developed by Steve Markgraf, Dimitri Stolnikov, and Hoernchen, with contributions by Kyle Keen, Christian Vogel and Harald Welte.
 
 For a basic network scan the rtl_power command line utility by Steve Markgraf can be used. The following command will scan from 470 - 790 MHz with a FFT bin size of 10 kHz and an integration interval of 10 seconds at a tuner gain of ~50 dB and exit after 50s and will crop the outer 20\% of the sampling bandwidth where there is a lower signal quality. It will save the data in “data.csv” in the current directory.
@@ -148,12 +148,24 @@ a description of the rtl_power parameters may be found in the appendices.
 All functions in librtlsdr are accessible via a Pythonic interface from pyrtlsdr.
 the following python code snippet is an example of accessing the rtl-sdr utilities in python :
 
+\begin{quote}
+from rtlsdr import RtlSdr
 
+sdr = RtlSdr()
 
+# configure device
+sdr.sample_rate = 2.048e6  # Hz
+sdr.center_freq = 70e6 	# Hz
+sdr.freq_correction = 60   # PPM
+sdr.gain = 'auto'
+
+print(sdr.read_samples(512))
+\end{quote}
 
 
 
 \section{Software Stack}
+    
     
     
     
