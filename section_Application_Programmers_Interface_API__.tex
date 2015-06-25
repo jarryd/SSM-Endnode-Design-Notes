@@ -1,54 +1,62 @@
-\section{Application Programmers Interface (API)}
+\section{Application Program Interface (API)}
 
 \subsection{System}
 
 \subsubsection{System task interface}
 
-    Topic:  <IMEI>/system/task
-    Type:   Consumer
+Topic:
+\begin{lstlisting}
+<IMEI>/system/task
+\end{lstlisting}
+Type:   Consumer
     
-    System configuration interface
-    -----------------------------------------------------------------------------------
+System configuration interface
+-----------------------------------------------------------------------------------
     
-    Topic:  <IMEI>/system/config
-    Type:   Consumer
+Topic:  <IMEI>/system/config
+Type:   Consumer
     
-    Connection Status
-    -----------------------------------------------------------------------------------
+Connection Status
+-----------------------------------------------------------------------------------
     
-    Topic:  <IMEI>/system/status
-    Type:   Producer
+Topic:
+\begin{lstlisting}
+<IMEI>/system/status
+\end{lstlisting}
+Type:   Producer
     
-    This topic indicates whether or not the endnode is currently connected to the broker
+This topic indicates whether or not the endnode is currently connected to the broker
 
 
-#2. Device - SSM
+\subsection{Device - SSM}
 
-=======================================================================================
-
-    SSM Inbox
-    -----------------------------------------------------------------------------------
+SSM Inbox
+-----------------------------------------------------------------------------------
     
-    An XML interface to the spectrum scanner
+An XML interface to the spectrum scanner
     
-    Topic:  <IMEI>/ssm/task
-    Type:   Consumer
+Topic:  <IMEI>/ssm/task
+Type:   Consumer
 
-    SSM Spectrum Scans
-    -----------------------------------------------------------------------------------
-    Topic:  <IMEI>/ssm/scans
-    Type:   Producer
+SSM Spectrum Scans
+-----------------------------------------------------------------------------------
+Topic:
+\begin{lstlisting}
+<IMEI>/ssm/scans
+\end{lstlisting}
+Type:   Producer
     
-    This topic outputs raw scan files
+This topic outputs raw scan files
 
-    Parameters:
-        Start   Start of the frequency range in megahertz)
-        End     End of the frequency range in megahertz)
-        Gain    Scan gain in Decibels (optional, default – 0dB)
-        Dwell   Dwell time in seconds (optional, default – 131ms)
-        FFT     The number of FFT bins (optional, default – 1024)
-        LO      The local oscillator offset in megahertz (optional, default – 0MHz)
-
+Parameters:
+\begin{lstlisting}
+Start   Start of the frequency range in megahertz)
+End     End of the frequency range in megahertz)
+Gain    Scan gain in Decibels (optional, default – 0dB)
+Dwell   Dwell time in seconds (optional, default – 131ms)
+FFT     The number of FFT bins (optional, default – 1024)
+LO      The local oscillator offset in megahertz (optional, default – 0MHz)
+\end{lstlisting}
 
 
 #3. Device - GPS
@@ -111,6 +119,7 @@ Wether or not the endnode is currently connected to the broker
 
 
 
+    
     
     
     
