@@ -173,7 +173,7 @@ a description of the rtl_power parameters may be found in the appendices.
 All functions in librtlsdr are accessible via a Pythonic interface from pyrtlsdr.
 the following python code snippet is an example of accessing the rtl-sdr utilities in python :
 
-\begin{code}
+\begin{lstlisting}
 from rtlsdr import RtlSdr
 
 sdr = RtlSdr()
@@ -185,24 +185,12 @@ sdr.freq_correction = 60   # PPM
 sdr.gain = 'auto'
 
 print(sdr.read_samples(512))
-\end{code}
+\end{lstlisting}
 
 
 
 \section{Software Stack}
-    
-    
-\begin{lstlisting}
-// Hello.java
-import javax.swing.JApplet;
-import java.awt.Graphics;
 
-public class Hello extends JApplet {
-    public void paintComponent(Graphics g) {
-        g.drawString("Hello, world!", 65, 95);
-    }    
-}
-\end{lstlisting}
     
     
     
