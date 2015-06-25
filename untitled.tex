@@ -171,10 +171,10 @@ The software defined radio utilities used are based on the rtlsdr drivers by Ant
 
 For a basic network scan the rtl\_power command line utility by Steve Markgraf can be used. The following command will scan from 470 - 790 MHz with a FFT bin size of 10 kHz and an integration interval of 10 seconds at a tuner gain of ~50 dB and exit after 50s and will crop the outer 20\% of the sampling bandwidth where there is a lower signal quality. It will save the data in “data.csv” in the current directory.
 \begin{lstlisting}
-sudo rtl\_power -f 470M:790M:0.01M -i 10s -g 50 -e 50s -c 20\%  data.csv
+sudo rtl_power -f 470M:790M:0.01M -i 10s -g 50 -e 50s -c 20\%  data.csv
 \end{lstlisting}
 
-A description of the rtl_power parameters may be found in the appendices.
+A description of the rtl\_power parameters may be found in the appendices.
 
 All functions in librtlsdr are accessible via a Pythonic interface from pyrtlsdr.
 the following python code snippet is an example of accessing the rtl-sdr utilities in python :
@@ -201,6 +201,7 @@ Package:	SQLite
 
 \subsubsection{SQLite interface}
 Package:	sqlite3
+    
     
     
     
