@@ -31,7 +31,7 @@ Package:	\href{https://github.com/Knio/pynmea2}{pynmea2}
 
 GPS location will be determined using the on-board GPS/GSNS block inside the Telit GE910-GNSS module. Location strings are given in the following format:
 \begin{quote}
-<UTC>,<latitude>,<longitude>,<hdop>,<altitude>,<fix>,<cog>,<spkm>,<spkn>,<date>,<nsat>
+\textbf{<UTC>,<latitude>,<longitude>,<hdop>,<altitude>,<fix>,<cog>,<spkm>,<spkn>,<date>,<nsat>}
 \end{quote} 
 
 \textbf{<UTC>} \\
@@ -115,11 +115,45 @@ yy - year
 nn - Total number of satellites in use (referred to GGA sentence)
 						
 00..12
-    
-    
-    
-    
-    
+
+For example:
+194118.000,2553.37745S,02804.20558E,1.0,1516.06,3,0.0,0.1,0.1,050714,07
+
+pynmea2 is used to parse Telit NMEA strings into Python objects so they can integrated as MQTT updates.
+
+\subsection{Remote telemetry}
+
+\subsubsection{MQTT}
+Package:	\href{https://eclipse.org/paho/clients/python/}{paho}
+
+\subsection{GSM/GPRS Dialer}
+Package: 	ppp with wvdial
+See Appendix B for wvdial configuration file.
+
+\subsubsection{Sub-process interface}
+Package:	\href{https://docs.python.org/2/library/subprocess.html}{subprocess}
+
+\subsection{SDR}
+\subsubsection{SDR hardware interface}
+Package:	\href{https://github.com/steve-m/librtlsdr}{rtlsdr}
+
+\subsubsection{rtlsdr wrapper}
+Package:	\href{https://github.com/roger-/pyrtlsdr}{pyrtlsdr}
+The software defined radio utilities used are based on the rtlsdr drivers by Antti Palosaari, Osmocom and Eric Fry. rtl-sdr is developed by Steve Markgraf, Dimitri Stolnikov, and Hoernchen, with contributions by Kyle Keen, Christian Vogel and Harald Welte.
+
+For a basic network scan the rtl_power command line utility by Steve Markgraf can be used. The following command will scan from 470 - 790 MHz with a FFT bin size of 10 kHz and an integration interval of 10 seconds at a tuner gain of ~50 dB and exit after 50s and will crop the outer 20\% of the sampling bandwidth where there is a lower signal quality. It will save the data in “data.csv” in the current directory.
+sudo rtl_power -f 470M:790M:0.01M -i 10s -g 50 -e 50s -c 20\%  data.csv
+a description of the rtl_power parameters may be found in the appendices.
+
+All functions in librtlsdr are accessible via a Pythonic interface from pyrtlsdr.
+the following python code snippet is an example of accessing the rtl-sdr utilities in python :
+
+
+
+
+
+
+\section{Software Stack}
     
     
     
