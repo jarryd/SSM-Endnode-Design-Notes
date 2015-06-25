@@ -1,7 +1,9 @@
 \section{Application Program Interface (API)}
 \subsection{System}
-# Testing
+
+% ---------------------------------------------------------------------------------------------------
 \subsubsection{System task interface}
+
 Topic:
 \begin{lstlisting}<IMEI>/system/task\end{lstlisting}
 Type:
@@ -9,8 +11,9 @@ Type:
 Example response:
 \begin{lstlisting}\end{lstlisting}
 
-
+% ---------------------------------------------------------------------------------------------------
 \subsubsection{System configuration interface}
+
 Topic:
 \begin{lstlisting}<IMEI>/system/config\end{lstlisting}
 Type:
@@ -18,7 +21,7 @@ Type:
 Example response:
 \begin{lstlisting}\end{lstlisting}
 
-
+% ---------------------------------------------------------------------------------------------------
 \subsubsection{Connection Status}
 
 Topic:
@@ -28,20 +31,18 @@ Type:
     
 This topic indicates whether or not the endnode is currently connected to the broker
 
+% ---------------------------------------------------------------------------------------------------
+\subsection{SSM}
 
-\subsection{Device - SSM}
-
-\subsubsection{SSM Inbox}
-
+\subsubsection{SSM task interface}
 An XML interface to the spectrum scanner
-    
 Topic:
 \begin{lstlisting}node/<I<IMEI>/ssm/task\end{lstlisting}
 Type:
 \begin{lstlisting}consumer\end{lstlisting}
 
-\subsubsection{SSM Spectrum Scans}
-
+% ---------------------------------------------------------------------------------------------------
+\subsubsection{Power scans}
 Topic:
 \begin{lstlisting}<IMEI>/ssm/scans\end{lstlisting}
 Type:
@@ -109,6 +110,7 @@ Wether or not the endnode is currently connected to the broker
 
 
 
+    
     
     
     
