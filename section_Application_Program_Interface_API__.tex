@@ -16,9 +16,8 @@ Topic:
 Type:
 \begin{lstlisting}consumer\end{lstlisting}
     
-Connection Status
------------------------------------------------------------------------------------
-    
+\subsubsection{Connection Status}
+
 Topic:
 \begin{lstlisting}<IMEI>/system/status\end{lstlisting}
 Type:
@@ -29,21 +28,21 @@ This topic indicates whether or not the endnode is currently connected to the br
 
 \subsection{Device - SSM}
 
-SSM Inbox
------------------------------------------------------------------------------------
-    
+\subsection{SSM Inbox}
+
 An XML interface to the spectrum scanner
     
-Topic:  <IMEI>/ssm/task
-Type:   Consumer
-
-SSM Spectrum Scans
------------------------------------------------------------------------------------
 Topic:
-\begin{lstlisting}
-<IMEI>/ssm/scans
-\end{lstlisting}
-Type:   Producer
+\begin{lstlisting}<IMEI>/ssm/task\end{lstlisting}
+Type:
+\begin{lstlisting}consumer\end{lstlisting}
+
+\subsection{SSM Spectrum Scans}
+
+Topic:
+\begin{lstlisting}<IMEI>/ssm/scans\end{lstlisting}
+Type:
+\begin{lstlisting}producer\end{lstlisting}
     
 This topic outputs raw scan files
 
@@ -58,15 +57,13 @@ LO      The local oscillator offset in megahertz (optional, default – 0MHz)
 \end{lstlisting}
 
 
-#3. Device - GPS
-=======================================================================================
+\subsection{Device - GPS}
+\subsubsection{GPS Inbox}
 
-
-##GPS Inbox
------------------------------------------------------------------------------------
-
-    Topic:  <IMEI>/gps/workflow
-    Type:   Consumer
+Topic:
+\begin{lstlisting}<IMEI>/gps/workflow\end{lstlisting}
+Type:
+\begin{lstlisting}consumer\end{lstlisting}
 
 
 
@@ -118,6 +115,7 @@ Wether or not the endnode is currently connected to the broker
 
 
 
+    
     
     
     
