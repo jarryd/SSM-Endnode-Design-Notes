@@ -35,23 +35,24 @@ GPS location will be determined using the on-board GPS/GSNS block inside the Tel
 \end{quote}
 
 \begin{table} 
-    \begin{tabular}{ c c }
-        <UTC> & UTC time (hhmmss.sss) referred to GGA sentence \\ 
-        <latitude> & Latitude N/S (referred to GGA sentence)format:ddmm.mmmm	where:dd - degrees00..90mm.mmmm - minutes00.0000..59.9999N/S: North / South \\ 
-        <longitude> & Format is dddmm.mmmm E/W (referred to GGA sentence) format:dddmm.mmmmwhere:ddd - degrees	000..180mm.mmmm - minutes	00.0000..59.9999E/W: East / West \\ 
-        <hdop> & Horizontal Diluition of Precision (referred to GGA sentence) \\ 
-        <altitude> & Altitude - mean-sea-level (geoid) in meters (referred to GGA sentence) \\ 
-        <fix> & 0 - Invalid Fix2 - 2D fix3 - 3D fix \\ 
+    \begin{tabular}{| l | l |}
+        <UTC> & UTC time (hhmmss.sss) referred to GGA sentence \\ \hline
+        <latitude> & Latitude N/S (referred to GGA sentence)format:ddmm.mmmm	where:dd - degrees00..90mm.mmmm - minutes00.0000..59.9999N/S: North / South \\ \hline
+        <longitude> & Format is dddmm.mmmm E/W (referred to GGA sentence) format:dddmm.mmmmwhere:ddd - degrees	000..180mm.mmmm - minutes	00.0000..59.9999E/W: East / West \\ \hline
+        <hdop> & Horizontal Diluition of Precision (referred to GGA sentence) \\ \hline
+        <altitude> & Altitude - mean-sea-level (geoid) in meters (referred to GGA sentence) \\ \hline
+        <fix> & 0 - Invalid Fix2 - 2D fix3 - 3D fix \\ \hline
         <cog> & Course over Ground (degrees, True) (referred to VTG sentence) where:
 
-format:ddd.mmddd - degrees000..360mm - minutes00..59 \\ 
-        <spkm> & Speed over ground (Km/hr) (referred to VTG sentence) \\ 
-        <spkn> & Speed over ground (knots) (referred to VTG sentence) \\ 
-        <date> & Date of Fix (referred to RMC sentence) format:ddmmyy where:dd - day01..31mm - month01..12yy - year00..99 - 2000 to 2099 \\ 
-        <nsat> & nn - Total number of satellites in use (referred to GGA sentence)00..12 \\ 
-         &  \\ 
+format:ddd.mmddd - degrees000..360mm - minutes00..59 \\ \hline
+        <spkm> & Speed over ground (Km/hr) (referred to VTG sentence) \\ \hline
+        <spkn> & Speed over ground (knots) (referred to VTG sentence) \\ \hline
+        <date> & Date of Fix (referred to RMC sentence) format:ddmmyy where:dd - day01..31mm - month01..12yy - year00..99 - 2000 to 2099 \\ \hline
+        <nsat> & nn - Total number of satellites in use (referred to GGA sentence)00..12 \\ \hline
+         &  \\ \hline
     \end{tabular} 
 \end{table}
+    
     
     
     
