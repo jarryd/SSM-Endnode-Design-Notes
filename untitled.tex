@@ -114,7 +114,9 @@ ddd - degrees
 mm - minutes						
 00..59
 
-\textbf{<spkm>} \\
+\begin{lstlisting}
+\textbf{<spkm>}
+\end{lstlisting}
 Speed over ground (Km/hr) (referred to VTG sentence)
 
 \textbf{<spkn>} \\
@@ -178,7 +180,7 @@ from rtlsdr import RtlSdr
 
 sdr = RtlSdr()
 
-\# configure device
+# configure device
 sdr.sample_rate = 2.048e6  # Hz
 sdr.center_freq = 70e6 	# Hz
 sdr.freq_correction = 60   # PPM
@@ -191,6 +193,7 @@ print(sdr.read_samples(512))
 
 \section{Software Stack}
 
+    
     
     
     
