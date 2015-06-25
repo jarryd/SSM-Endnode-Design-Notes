@@ -168,8 +168,11 @@ Package:	\href{https://github.com/roger-/pyrtlsdr}{pyrtlsdr}\\
 The software defined radio utilities used are based on the rtlsdr drivers by Antti Palosaari, Osmocom and Eric Fry. rtl-sdr is developed by Steve Markgraf, Dimitri Stolnikov, and Hoernchen, with contributions by Kyle Keen, Christian Vogel and Harald Welte.
 
 For a basic network scan the rtl_power command line utility by Steve Markgraf can be used. The following command will scan from 470 - 790 MHz with a FFT bin size of 10 kHz and an integration interval of 10 seconds at a tuner gain of ~50 dB and exit after 50s and will crop the outer 20\% of the sampling bandwidth where there is a lower signal quality. It will save the data in “data.csv” in the current directory.
+\begin{lstlisting}
 sudo rtl_power -f 470M:790M:0.01M -i 10s -g 50 -e 50s -c 20\%  data.csv
-a description of the rtl_power parameters may be found in the appendices.
+\end{lstlisting}
+
+A description of the rtl_power parameters may be found in the appendices.
 
 All functions in librtlsdr are accessible via a Pythonic interface from pyrtlsdr.
 the following python code snippet is an example of accessing the rtl-sdr utilities in python :
@@ -196,3 +199,4 @@ Package:	SQLite
 
 \subsubsection{SQLite interface}
 Package:	sqlite3
+    
