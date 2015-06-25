@@ -22,6 +22,17 @@
   tabsize=3
 }
 
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,type}% list your attributes here
+}
+
 
 \section{Software Stack}
 
@@ -201,6 +212,7 @@ Package:	SQLite
 
 \subsubsection{SQLite interface}
 Package:	sqlite3
+    
     
     
     
