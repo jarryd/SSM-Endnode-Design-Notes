@@ -62,10 +62,11 @@ band_offset             Band offset, the amount of non-linear band to trim off (
 \end{lstlisting}
 
 Example:
-\begin{lstlisting}
+\lstdefinelanguage{XML}
+{
 <?xml version="1.0" encoding="UTF-8"?>
 <task task_id="power scan" cid="jrnsljkngafdkg" lower_freq="580000000" upper_freq="590000000" bin_size="10000"  gain="30"  exit_timer="2s" integration_interval="2s" band_offset="20%"></task>
-\end{lstlisting}
+}
 
 
 Output:
@@ -105,6 +106,7 @@ Wether or not the endnode is currently connected to the broker
 
 
 
+    
     
     
     
