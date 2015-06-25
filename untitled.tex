@@ -23,5 +23,18 @@ Package:	\href{https://pypi.python.org/pypi/pyA20Lime}{pyA20Lime}
 
 SPI/I2C/GPIO is used to communicate with the power management IC. GPIO is used to control and monitor the Telit GE910-GNSS. GPIO is used to control the system, network, location and fault LEDs.
     
+\subsection{Location}
+
+\subsubsection{GPS utilities}
+
+Package:	\href{https://github.com/Knio/pynmea2}{pynmea2}
+
+GPS location will be determined using the on-board GPS/GSNS block inside the Telit GE910-GNSS module. Location strings are given in the following format:
+\begin{quote}
+<UTC>,<latitude>,<longitude>,<hdop>,<altitude>,<fix>,<cog>,
+\end{quote}
+\begin{quote}
+<spkm>,<spkn>,<date>,<nsat>
+\end{quote}
     
     
