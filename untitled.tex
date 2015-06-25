@@ -55,9 +55,9 @@ SPI/I2C/GPIO is used to communicate with the power management IC. GPIO is used t
 Package:	\href{https://github.com/Knio/pynmea2}{pynmea2}
 
 GPS location will be determined using the on-board GPS/GSNS block inside the Telit GE910-GNSS module. Location strings are given in the following format:
-\begin{quote}
+\begin{lstlisting}
 \textbf{<UTC>,<latitude>,<longitude>,<hdop>,<altitude>,<fix>,<cog>,<spkm>,<spkn>,<date>,<nsat>}
-\end{quote} 
+\end{lstlisting}
 
 \textbf{<UTC>} \\
 UTC time (hhmmss.sss) referred to GGA sentence
@@ -114,9 +114,8 @@ ddd - degrees
 mm - minutes						
 00..59
 
-\begin{lstlisting}
-\textbf{<spkm>}
-\end{lstlisting}
+
+\textbf{<spkm>}\\
 Speed over ground (Km/hr) (referred to VTG sentence)
 
 \textbf{<spkn>} \\
@@ -193,6 +192,7 @@ print(sdr.read_samples(512))
 
 \section{Software Stack}
 
+    
     
     
     
