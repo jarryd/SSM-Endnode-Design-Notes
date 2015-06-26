@@ -1,6 +1,98 @@
 
 \chapter{Appendix}
-\section{Appendix A}
+\section{Appendix A : GPS data format and structure}
+Location strings are given in the following format:
+\begin{lstlisting}
+<UTC>,<latitude>,<longitude>,<hdop>,<altitude>,<fix>,<cog>,<spkm>,<spkn>,<date>,<nsat>
+\end{lstlisting}
+
+\textbf{<UTC>} \\
+UTC time (hhmmss.sss) referred to GGA sentence
+
+\textbf{<latitude>} \\
+Latitude N/S (referred to GGA sentence)
+	
+format:
+ddmm.mmmm
+					
+where:
+dd - degrees
+00..90
+
+mm.mmmm - minutes
+00.0000..59.9999
+
+N/S: North / South 
+
+\textbf{<longitude>} \\
+Format is dddmm.mmmm E/W (referred to GGA sentence) 
+
+format:
+dddmm.mmmm
+
+where:
+ddd - degrees						
+000..180
+
+mm.mmmm - minutes				
+00.0000..59.9999
+
+E/W: East / West
+
+\textbf{<hdop>} \\
+Horizontal Diluition of Precision (referred to GGA sentence) 
+
+\textbf{<altitude>} \\
+Altitude - mean-sea-level (geoid) in meters (referred to GGA sentence)
+
+\textbf{<fix>} \\
+0 - Invalid Fix
+2 - 2D fix
+3 - 3D fix
+
+\textbf{<cog>} \\
+Course over Ground (degrees, True) (referred to VTG sentence) where:
+format:
+ddd.mm
+
+ddd - degrees		 	 	 		
+000..360
+
+mm - minutes						
+00..59
+
+
+\textbf{<spkm>}\\
+Speed over ground (Km/hr) (referred to VTG sentence)
+
+\textbf{<spkn>} \\
+Speed over ground (knots) (referred to VTG sentence)
+
+\textbf{<date>} \\
+Date of Fix (referred to RMC sentence)
+
+format:
+ddmmyy 
+						
+where:
+dd - day					
+01..31
+
+mm - month					
+01..12
+
+yy - year						
+00..99 - 2000 to 2099
+
+\textbf{<nsat>}
+nn - Total number of satellites in use (referred to GGA sentence)
+						
+00..12
+
+For example:
+\begin{lstlisting}
+194118.000,2553.37745S,02804.20558E,1.0,1516.06,3,0.0,0.1,0.1,050714,07
+\end{lstlisting}
 
 % ---------------------------------------------------------------------------------------------------
 \subsection{System task interface}
@@ -8,6 +100,7 @@ some text
 \endsubsection{System task interface}
 \endsection{Appendix A}
 \endchapter{Appencies}
+    
     
     
     
