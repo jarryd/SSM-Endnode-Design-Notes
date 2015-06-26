@@ -54,100 +54,7 @@ SPI/I2C/GPIO is used to communicate with the power management IC. GPIO is used t
 
 Package:	\href{https://github.com/Knio/pynmea2}{pynmea2}
 
-GPS location will be determined using the on-board GPS/GSNS block inside the Telit GE910-GNSS module. Location strings are given in the following format:
-\begin{lstlisting}
-<UTC>,<latitude>,<longitude>,<hdop>,<altitude>,<fix>,<cog>,<spkm>,<spkn>,<date>,<nsat>
-\end{lstlisting}
-
-\textbf{<UTC>} \\
-UTC time (hhmmss.sss) referred to GGA sentence
-
-\textbf{<latitude>} \\
-Latitude N/S (referred to GGA sentence)
-	
-format:
-ddmm.mmmm
-					
-where:
-dd - degrees
-00..90
-
-mm.mmmm - minutes
-00.0000..59.9999
-
-N/S: North / South 
-
-\textbf{<longitude>} \\
-Format is dddmm.mmmm E/W (referred to GGA sentence) 
-
-format:
-dddmm.mmmm
-
-where:
-ddd - degrees						
-000..180
-
-mm.mmmm - minutes				
-00.0000..59.9999
-
-E/W: East / West
-
-\textbf{<hdop>} \\
-Horizontal Diluition of Precision (referred to GGA sentence) 
-
-\textbf{<altitude>} \\
-Altitude - mean-sea-level (geoid) in meters (referred to GGA sentence)
-
-\textbf{<fix>} \\
-0 - Invalid Fix
-2 - 2D fix
-3 - 3D fix
-
-\textbf{<cog>} \\
-Course over Ground (degrees, True) (referred to VTG sentence) where:
-format:
-ddd.mm
-
-ddd - degrees		 	 	 		
-000..360
-
-mm - minutes						
-00..59
-
-
-\textbf{<spkm>}\\
-Speed over ground (Km/hr) (referred to VTG sentence)
-
-\textbf{<spkn>} \\
-Speed over ground (knots) (referred to VTG sentence)
-
-\textbf{<date>} \\
-Date of Fix (referred to RMC sentence)
-
-format:
-ddmmyy 
-						
-where:
-dd - day					
-01..31
-
-mm - month					
-01..12
-
-yy - year						
-00..99 - 2000 to 2099
-
-\textbf{<nsat>}
-nn - Total number of satellites in use (referred to GGA sentence)
-						
-00..12
-
-For example:
-\begin{lstlisting}
-194118.000,2553.37745S,02804.20558E,1.0,1516.06,3,0.0,0.1,0.1,050714,07
-\end{lstlisting}
-
-pynmea2 is used to parse Telit NMEA strings into Python objects so they can integrated as MQTT updates.
+GPS location will be determined using the on-board GPS/GSNS block inside the Telit GE910-GNSS module. pynmea2 is used to parse Telit NMEA strings into Python objects so they can integrated as MQTT updates. See the Appendix for the parsed data format and structure.
 
 \subsection{Remote telemetry}
 
@@ -203,6 +110,7 @@ Package:	SQLite
 
 \subsubsection{SQLite interface}
 Package:	sqlite3
+    
     
     
     
