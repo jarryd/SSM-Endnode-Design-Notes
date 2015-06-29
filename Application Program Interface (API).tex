@@ -109,15 +109,17 @@ Example message:
 
 The Telit xE910-GNSS module used on the SSM has a USB interface set to show 3 virtual USB devices ( PORTCFG=8 ). These devices are enumerated as follows by the operating system on the SSM.
 \begin{table} 
+    \centering
     \begin{tabular}{ c c c }
+        \toprule
         Port & Description & Service \\ 
-        \hline
+        \midrule
         /dev/ttyACM0 & modem AT command interface 0 & Used by wvdial and ppp for a data connection over GPRS link \\ 
-        \hline
+        \midrule
         /dev/ttyACM1 & modem AT command interface 1 & used by the SSM as a configuuration interface \\ 
-        \hline
+        \midrule
         /dev/tty/ACM2 & GNSS serial NMEA output & used by GPS system for location information \\ 
-        \hline
+        \bottomrule
     \end{tabular} 
     \caption{SSM GSM/GPRS-GNSS module USB virtual COM port enumeration} 
 \end{table}
@@ -167,6 +169,7 @@ Wether or not the endnode is currently connected to the broker
     
     
     
+  
   
   
   
