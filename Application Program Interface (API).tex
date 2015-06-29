@@ -2,7 +2,7 @@
 \subsection{System}
 The API is structure based on a set of micro-services on the SSM and how they relate to each other. Each micro service can be configured in specific ways and will also publish data and events to topics that relate to their capabilities and roles. \textit{node} is the root topic for the SSM devices and is uniquely identified and accessed by the \href{http://www.gsma.com/technicalprojects/faq/what-is-an-imei}{IMEI} number from its GSM/GPRS modem ( also referred to as the endnode ).
 
-Data within each MQTT message is sent as XML data based in the schema in \href{Appendix B}.
+Data within each MQTT message is sent as XML data based in the schema in Appendix B.
 
 \begin{figure}[h]
     \centering
@@ -106,22 +106,6 @@ Example message:
 <task task_id="location scan" cid="jrnsljkngafdkg"></task>
 \end{lstlisting}
 
-The Telit xE910-GNSS module used on the SSM has a USB interface set to show 3 virtual USB devices ( PORTCFG=8 ). These devices are enumerated as follows by the operating system on the SSM.
-
-\begin{table}[htpb]
-  \centering
-    \begin{tabular}{ccc}
-    \textbf{Port}   & \textbf{Description}          & \textbf{Service} \\
- \hline
-    /dev/ttyACM0    & modem AT command interface 0  & Used by wvdial and ppp for a data connection over GPRS link \\
- \hline
-    /dev/ttyACM1    & modem AT command interface 1  & used by the SSM as a configuration interface \\
- \hline
-    /dev/ttyACM2    & GNSS serial NMEA output        & used by GPS system for location information \\
- \hline
-    \end{tabular}
-   \caption{Telit xE-910-GNSS USB port configuration}
-\end{table}
 
 
 
@@ -169,6 +153,7 @@ Wether or not the endnode is currently connected to the broker
     
     
     
+  
   
   
   
