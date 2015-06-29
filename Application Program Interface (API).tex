@@ -1,6 +1,8 @@
 \section{Application Program Interface (API)}
 \subsection{System}
-The API is structure based on a set of micro-services on the SSM and how they relate to each other. Each micro service can be configured in specific ways and will also publish data and events to topics that relate to their capabilities and roles.
+The API is structure based on a set of micro-services on the SSM and how they relate to each other. Each micro service can be configured in specific ways and will also publish data and events to topics that relate to their capabilities and roles. \textit{node} is the root topic for the SSM devices and each SSM is identified by the \href{http://www.gsma.com/technicalprojects/faq/what-is-an-imei}{IMEI} number from its GSM/GPRS modem.
+
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{https://www.authorea.com/users/42442/articles/49215/master/file/figures/SSM/SSM.png}
@@ -145,6 +147,7 @@ Wether or not the endnode is currently connected to the broker
     
     
     
+  
   
   
   
