@@ -42,14 +42,23 @@ Type:
 \begin{lstlisting}producer\end{lstlisting}
     
 This topic indicates whether or not the endnode is currently connected to the broker
+% ---------------------------------------------------------------------------------------------------
+\subsection{Analyser}
+
+\subsubsection{Analyser task interface}
+An XML interface to the spectrum analysis task that attempts to interpret spectrum scans and classify them as different types of data transmissions
+Topic:
+\begin{lstlisting}node/<IMEI>/ssm/task\end{lstlisting}
+Type:
+\begin{lstlisting}producer\end{lstlisting}
 
 % ---------------------------------------------------------------------------------------------------
 \subsection{SSM}
 
 \subsubsection{SSM task interface}
-An XML interface to the spectrum scanner
+An XML interface to the spectrum scanner that will return  spectrum scan information
 Topic:
-\begin{lstlisting}node/<I<IMEI>/ssm/task\end{lstlisting}
+\begin{lstlisting}node/<IMEI>/ssm/task\end{lstlisting}
 Type:
 \begin{lstlisting}consumer\end{lstlisting}
 
@@ -153,6 +162,7 @@ Wether or not the endnode is currently connected to the broker
     
     
     
+  
   
   
   
