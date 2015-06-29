@@ -71,6 +71,25 @@ The Paho project is an open-source client implementations of MQTT and MQTT-SN me
 Package: 	ppp with wvdial\\
 See Appendix B for wvdial configuration file.
 
+
+The Telit xE910-GNSS module used on the SSM has a USB interface set to show 3 virtual USB devices ( PORTCFG=8 ). These devices are enumerated as follows by the operating system on the SSM.
+
+\begin{table}[htpb]
+  \centering
+    \begin{tabular}{ccc}
+    \textbf{Port}   & \textbf{Description}          & \textbf{Service} \\
+ \hline
+    /dev/ttyACM0    & modem AT command interface 0  & Used by wvdial and ppp for a data connection over GPRS link \\
+ \hline
+    /dev/ttyACM1    & modem AT command interface 1  & used by the SSM as a configuration interface \\
+ \hline
+    /dev/ttyACM2    & GNSS serial NMEA output        & used by GPS system for location information \\
+ \hline
+    \end{tabular}
+   \caption{Telit xE-910-GNSS USB port configuration}
+\end{table}
+
+
 \subsubsection{Sub-process interface}
 Package:	\href{https://docs.python.org/2/library/subprocess.html}{subprocess}\\
 
@@ -143,3 +162,5 @@ Package:	sqlite3
     
     
     
+  
+  
