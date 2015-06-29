@@ -1,7 +1,8 @@
 \section{Application Program Interface (API)}
 \subsection{System}
-The API is structure based on a set of micro-services on the SSM and how they relate to each other. Each micro service can be configured in specific ways and will also publish data and events to topics that relate to their capabilities and roles. \textit{node} is the root topic for the SSM devices and each SSM is identified by the \href{http://www.gsma.com/technicalprojects/faq/what-is-an-imei}{IMEI} number from its GSM/GPRS modem.
+The API is structure based on a set of micro-services on the SSM and how they relate to each other. Each micro service can be configured in specific ways and will also publish data and events to topics that relate to their capabilities and roles. \textit{node} is the root topic for the SSM devices and is uniquely identified and accessed by the \href{http://www.gsma.com/technicalprojects/faq/what-is-an-imei}{IMEI} number from its GSM/GPRS modem ( also referred to as the endnode ).
 
+Data within each MQTT message is sent as XML data
 
 \begin{figure}[h]
     \centering
@@ -15,6 +16,8 @@ Topic:
 \begin{lstlisting}<IMEI>/system/task\end{lstlisting}
 Type:
 \begin{lstlisting}consumer\end{lstlisting}
+Example query:
+\begin{lstlisting}\end{lstlisting}
 Example response:
 \begin{lstlisting}\end{lstlisting}
 
@@ -25,6 +28,8 @@ Topic:
 \begin{lstlisting}<IMEI>/system/config\end{lstlisting}
 Type:
 \begin{lstlisting}consumer\end{lstlisting}
+Example query:
+\begin{lstlisting}\end{lstlisting}
 Example response:
 \begin{lstlisting}\end{lstlisting}
 
@@ -90,7 +95,11 @@ Topic:
 \begin{lstlisting}node/<IMEI>/gps/tasks\end{lstlisting}
 Type:
 \begin{lstlisting}consumer\end{lstlisting}
-
+Example query:
+\begin{lstlisting} node/359785020094598/device/gps/task <task task_id="location scan" imei="359785020094598" cid="K07PB1ECWEPGX49ERVF94B59J3YP"></task>\end{lstlisting}
+Example response:
+\begin{lstlisting}node/359785020094598/device/gps/task <task task_id="location scan" imei="359785020094598" cid="K06278V2WN61S4R3DP0MHNMDPTGP"></task>
+node/359785020094598/device/gps/location <location imei="359785020094598" cid="K06278V2WN61S4R3DP0MHNMDPTGP"><position true_course="0.0" link_quality="" altitude_unit="" satellites="" timestamp="06:52:38" altitude="0.0" longitude="02757.28280" data_validity="A" latitude="2603.21483" longitude_direction="E" latitude_direction="S" datestamp="2015-06-29" speed="0.0"/></location>\end{lstlisting}
 Example message:
 \begin{lstlisting}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -147,6 +156,7 @@ Wether or not the endnode is currently connected to the broker
     
     
     
+  
   
   
   
